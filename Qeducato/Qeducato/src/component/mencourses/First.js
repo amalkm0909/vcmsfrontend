@@ -1,11 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img1 from "../../assets/img/bg/couress-img-1.png";
-import img2 from "../../assets/img/bg/couress-img-2.png";
-import img3 from "../../assets/img/bg/couress-img-3.png";
-import img4 from "../../assets/img/bg/couress-img-4.png";
-import img5 from "../../assets/img/bg/couress-img-5.png";
-import img6 from "../../assets/img/bg/couress-img-6.png";
 
 function First() {
   const courses = [
@@ -15,7 +9,7 @@ function First() {
       description:
         "Comprehensive training in ship building and repair management with 100% placement support.",
       link: "/course-details/1",
-      img: img1,
+      img: "/assets/img/class/class-1.jpg",
       duration: "1 YEAR",
       eligibility: "+2 & ABOVE",
     },
@@ -25,7 +19,7 @@ function First() {
       description:
         "Master advanced automotive technologies and engineering with hands-on training.",
       link: "/course-details/2",
-      img: img2,
+      img: "/assets/img/class/class-2.jpg",
       duration: "1 YEAR",
       eligibility: "+2 & ABOVE",
     },
@@ -35,7 +29,7 @@ function First() {
       description:
         "Develop expertise in human resources and office management practices.",
       link: "/course-details/3",
-      img: img3,
+      img: "/assets/img/class/class-3.jpg",
       duration: "1 YEAR",
       eligibility: "+2 & ABOVE",
     },
@@ -45,7 +39,7 @@ function First() {
       description:
         "Learn logistics operations and shipping management from industry experts.",
       link: "/course-details/4",
-      img: img4,
+      img: "/assets/img/class/class-4.jpg",
       duration: "1 YEAR",
       eligibility: "+2 & ABOVE",
     },
@@ -55,7 +49,7 @@ function First() {
       description:
         "Specialized training in hospital management and financial administration.",
       link: "/course-details/5",
-      img: img5,
+      img: "/assets/img/class/class-5.jpg",
       duration: "1 YEAR",
       eligibility: "+2 & ABOVE",
     },
@@ -65,7 +59,7 @@ function First() {
       description:
         "Explore international business strategies and global market trends.",
       link: "/course-details/6",
-      img: img6,
+      img: "/assets/img/class/class-6.jpg",
       duration: "1 YEAR",
       eligibility: "DEGREE",
     },

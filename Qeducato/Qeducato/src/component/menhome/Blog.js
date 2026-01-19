@@ -37,16 +37,42 @@ function Blog() {
                 className="single-post2 hover-zoomin mb-30 wow fadeInUp animated"
                 data-animation="fadeInUp"
                 data-delay=".4s"
+                style={{
+                  height: "550px",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
               >
-                <div className="blog-thumb2">
+                <div
+                  className="blog-thumb2"
+                  style={{
+                    height: "250px",
+                    overflow: "hidden",
+                  }}
+                >
                   <Link to="/blog-details">
-                    <img src={blogImg1} alt="img" />
+                    <img
+                      src={blogImg1}
+                      alt="img"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
                   </Link>
                   <div className="date-home">
                     <i className="fal fa-calendar-alt" /> 10th January 2026
                   </div>
                 </div>
-                <div className="blog-content2">
+                <div
+                  className="blog-content2"
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
                   <div className="b-meta">
                     <div className="meta-info">
                       <ul>
@@ -59,16 +85,16 @@ function Blog() {
                       </ul>
                     </div>
                   </div>
-                  <h4>
+                  <h4 style={{ minHeight: "50px" }}>
                     <Link to="/blog-details">
                       Cras accumsan nulla nec lacus ultricies placerat.
                     </Link>
                   </h4>
-                  <p>
+                  <p style={{ flex: 1 }}>
                     Curabitur sagittis libero tincidunt tempor finibus. Mauris
                     at dignissim ligula, nec tristique orci.
                   </p>
-                  <div className="blog-btn">
+                  <div className="blog-btn" style={{ marginTop: "auto" }}>
                     <Link to="/blog-details">
                       Read More <i className="fal fa-long-arrow-right" />
                     </Link>
@@ -81,16 +107,42 @@ function Blog() {
                 className="single-post2 mb-30 hover-zoomin wow fadeInUp animated"
                 data-animation="fadeInUp"
                 data-delay=".4s"
+                style={{
+                  height: "550px",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
               >
-                <div className="blog-thumb2">
+                <div
+                  className="blog-thumb2"
+                  style={{
+                    height: "250px",
+                    overflow: "hidden",
+                  }}
+                >
                   <Link to="/blog-details">
-                    <img src={blogImg2} alt="img" />
+                    <img
+                      src={blogImg2}
+                      alt="img"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
                   </Link>
                   <div className="date-home">
                     <i className="fal fa-calendar-alt" /> 5th January 2026
                   </div>
                 </div>
-                <div className="blog-content2">
+                <div
+                  className="blog-content2"
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
                   <div className="b-meta">
                     <div className="meta-info">
                       <ul>
@@ -103,16 +155,16 @@ function Blog() {
                       </ul>
                     </div>
                   </div>
-                  <h4>
+                  <h4 style={{ minHeight: "50px" }}>
                     <Link to="/blog-details">
                       Dras accumsan nulla nec lacus ultricies placerat.
                     </Link>
                   </h4>
-                  <p>
+                  <p style={{ flex: 1 }}>
                     Curabitur sagittis libero tincidunt tempor finibus. Mauris
                     at dignissim ligula, nec tristique orci.
                   </p>
-                  <div className="blog-btn">
+                  <div className="blog-btn" style={{ marginTop: "auto" }}>
                     <Link to="/blog-details">
                       Read More <i className="fal fa-long-arrow-right" />
                     </Link>
@@ -125,16 +177,42 @@ function Blog() {
                 className="single-post2 mb-30 hover-zoomin wow fadeInUp animated"
                 data-animation="fadeInUp"
                 data-delay=".4s"
+                style={{
+                  height: "550px",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
               >
-                <div className="blog-thumb2">
+                <div
+                  className="blog-thumb2"
+                  style={{
+                    height: "250px",
+                    overflow: "hidden",
+                  }}
+                >
                   <Link to="/blog-details">
-                    <img src={blogImg3} alt="img" />
+                    <img
+                      src={blogImg3}
+                      alt="img"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
                   </Link>
                   <div className="date-home">
                     <i className="fal fa-calendar-alt" /> 1st January 2026
                   </div>
                 </div>
-                <div className="blog-content2">
+                <div
+                  className="blog-content2"
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
                   <div className="b-meta">
                     <div className="meta-info">
                       <ul>
@@ -147,16 +225,16 @@ function Blog() {
                       </ul>
                     </div>
                   </div>
-                  <h4>
+                  <h4 style={{ minHeight: "50px" }}>
                     <Link to="/blog-details">
                       Seas accumsan nulla nec lacus ultricies placerat.
                     </Link>
                   </h4>
-                  <p>
+                  <p style={{ flex: 1 }}>
                     Curabitur sagittis libero tincidunt tempor finibus. Mauris
                     at dignissim ligula, nec tristique orci.
                   </p>
-                  <div className="blog-btn">
+                  <div className="blog-btn" style={{ marginTop: "auto" }}>
                     <Link to="/blog-details">
                       Read More <i className="fal fa-long-arrow-right" />
                     </Link>

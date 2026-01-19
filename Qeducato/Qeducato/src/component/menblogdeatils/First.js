@@ -8,7 +8,6 @@ import avatarImg from "../../assets/img/blog/comment/avatar.png";
 import c01 from "../../assets/img/blog/comment/c_01.png";
 import c02 from "../../assets/img/blog/comment/c_02.png";
 import c03 from "../../assets/img/blog/comment/c_03.png";
-import cdIcon from "../../assets/img/icon/c_d01.png";
 
 function First() {
   return (
@@ -158,7 +157,7 @@ function First() {
                     </div>
                     <div className="col-xl-4 col-md-2 text-left text-md-center">
                       <Link to="/blog" className="blog-filter">
-                        <img src={cdIcon} alt="" />
+                        <i className="fas fa-arrow-left"></i>
                       </Link>
                     </div>
                     <div className="col-xl-4 col-md-5">
