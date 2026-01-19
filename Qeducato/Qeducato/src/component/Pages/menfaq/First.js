@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import campusImage from "../../../assets/img/bg/faqvideo.jpg";
 
 const faqData = [
   {
@@ -53,7 +54,7 @@ function First() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-      > 
+      >
         <div className="container">
           <div className="row">
             <div
@@ -63,7 +64,18 @@ function First() {
             >
               <div
                 className="s-video-wrap2"
-                style={{ backgroundImage: "url(assets/img/faq-bg.png)" }}
+                style={{
+                  backgroundImage: `url(${campusImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  minHeight: "400px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: "50px",
+                  overflow: "hidden",
+                }}
               >
                 <div className="s-video-content text-center">
                   <h6>

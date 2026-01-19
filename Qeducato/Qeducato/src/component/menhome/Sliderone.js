@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import Background from "../../assets/img/slider/slider_bg.png";
+import Backgroundsix from "../../assets/img/slider/slider_bg_02.jpg";
 import Backgroundtwo from "../../assets/img/slider/slider_bg_01.png";
+import BackgroundThree from "../../assets/img/slider/slider_bg_03.png";
+import BackgroundFour from "../../assets/img/slider/slider_bg_04.png";
+import BackgroundFive from "../../assets/img/slider/slider_bg_05.png";
+import coursesData from "../../data/coursesData";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -47,196 +52,64 @@ function Sliderone() {
     ],
   };
 
+  // Convert coursesData object to array
+  const coursesArray = Object.values(coursesData);
+
+  // Array of background images for each slide
+  const backgroundImages = [
+    Background, // Course 1: Ship Building
+    Backgroundtwo, // Course 2: Automotive Technology
+    BackgroundThree, // Course 3: HR And Office Administration
+    BackgroundFour, // Course 4: Logistics and Shipping
+    BackgroundFive, // Course 5: Hospital Administration
+    Backgroundsix, // Course 6: Global Business Management (repeating Background)
+  ];
+
   return (
     <>
       {/* ================= SLIDER SECTION ================= */}
       <section id="home" className="slider-area fix p-relative">
         <Slider className="slider-active" {...settings}>
-          {/* Slide 1 */}
-          <div>
-            <div
-              className="single-slider slider-bg"
-              style={{
-                backgroundImage: `url(${Background})`,
-                backgroundSize: "cover",
-              }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7 col-md-7">
-                    <div className="slider-content mt-130 slider-card-highlight">
-                      <h5>welcome To VCMS</h5>
-                      <h2>Ship Building And Repair Management</h2>
-                      <p>
-                        At Viswam College of Management Studies, we believe in
-                        the power of education to transform lives and careers.
-                      </p>
-                      <div className="slider-btn mt-30">
-                        <Link to="/about" className="btn ss-btn mr-15">
-                          Explore Courses{" "}
-                          <i className="fal fa-long-arrow-right" />
-                        </Link>
-                        <Link
-                          to="/contact"
-                          className="btn ss-btn active contact-highlight"
-                        >
-                          Apply Now <i className="fal fa-long-arrow-right" />
-                        </Link>
+          {coursesArray.map((course, index) => (
+            <div key={course.id}>
+              <div
+                className="single-slider slider-bg"
+                style={{
+                  backgroundImage: `url(${backgroundImages[index] || Background})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  minHeight: "250px",
+                }}
+              >
+                <div className="container">
+                  <div className="row">
+                    <div className="col-lg-7 col-md-7">
+                      <div className="slider-content mt-130 slider-card-highlight">
+                        <h5>welcome To VCMS</h5>
+                        <h2>{course.title}</h2>
+                        <p>{course.overview.substring(0, 150)}...</p>
+                        <div className="slider-btn mt-30">
+                          <Link
+                            to={`/course-details/${course.id}`}
+                            className="btn ss-btn mr-15"
+                          >
+                            Explore Course{" "}
+                            <i className="fal fa-long-arrow-right" />
+                          </Link>
+                          <Link
+                            to="/contact"
+                            className="btn ss-btn active contact-highlight"
+                          >
+                            Apply Now <i className="fal fa-long-arrow-right" />
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Slide 2 */}
-          <div>
-            <div
-              className="single-slider slider-bg"
-              style={{
-                backgroundImage: `url(${Backgroundtwo})`,
-                backgroundSize: "cover",
-              }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7 col-md-7">
-                    <div className="slider-content mt-130 slider-card-highlight">
-                      <h5>welcome To VCMS</h5>
-                      <h2>HR And Office Administration</h2>
-                      <p>
-                        Develop essential HR and office management skills for
-                        modern workplaces.
-                      </p>
-                      <div className="slider-btn mt-30">
-                        <Link to="/about" className="btn ss-btn mr-15">
-                          View Program <i className="fal fa-long-arrow-right" />
-                        </Link>
-                        <Link
-                          to="/contact"
-                          className="btn ss-btn active contact-highlight"
-                        >
-                          Apply Now <i className="fal fa-long-arrow-right" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Slide 3 */}
-          <div>
-            <div
-              className="single-slider slider-bg"
-              style={{
-                backgroundImage: `url(${Backgroundtwo})`,
-                backgroundSize: "cover",
-              }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7 col-md-7">
-                    <div className="slider-content mt-130 slider-card-highlight">
-                      <h5>welcome To VCMS</h5>
-                      <h2>Logistics and Shipping Management</h2>
-                      <p>
-                        Master logistics, supply chain, and global shipping
-                        operations.
-                      </p>
-                      <div className="slider-btn mt-30">
-                        <Link to="/about" className="btn ss-btn mr-15">
-                          View Program <i className="fal fa-long-arrow-right" />
-                        </Link>
-                        <Link
-                          to="/contact"
-                          className="btn ss-btn active contact-highlight"
-                        >
-                          Apply Now <i className="fal fa-long-arrow-right" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Slide 4 */}
-          <div>
-            <div
-              className="single-slider slider-bg"
-              style={{
-                backgroundImage: `url(${Backgroundtwo})`,
-                backgroundSize: "cover",
-              }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7 col-md-7">
-                    <div className="slider-content mt-130 slider-card-highlight">
-                      <h5>welcome To VCMS</h5>
-                      <h2>Hospital Administration & Accounting</h2>
-                      <p>
-                        Learn healthcare administration, hospital operations,
-                        and medical accounting.
-                      </p>
-                      <div className="slider-btn mt-30">
-                        <Link to="/about" className="btn ss-btn mr-15">
-                          View Program <i className="fal fa-long-arrow-right" />
-                        </Link>
-                        <Link
-                          to="/contact"
-                          className="btn ss-btn active contact-highlight"
-                        >
-                          Apply Now <i className="fal fa-long-arrow-right" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Slide 5 */}
-          <div>
-            <div
-              className="single-slider slider-bg"
-              style={{
-                backgroundImage: `url(${Backgroundtwo})`,
-                backgroundSize: "cover",
-              }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7 col-md-7">
-                    <div className="slider-content mt-130 slider-card-highlight">
-                      <h5>welcome To VCMS</h5>
-                      <h2>Advanced Automotive Technology</h2>
-                      <p>
-                        Hands-on training in vehicle diagnostics, EV systems,
-                        and modern automotive technology.
-                      </p>
-                      <div className="slider-btn mt-30">
-                        <Link to="/about" className="btn ss-btn mr-15">
-                          View Program <i className="fal fa-long-arrow-right" />
-                        </Link>
-                        <Link
-                          to="/contact"
-                          className="btn ss-btn active contact-highlight"
-                        >
-                          Apply Now <i className="fal fa-long-arrow-right" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </Slider>
       </section>
     </>

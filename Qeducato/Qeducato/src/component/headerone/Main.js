@@ -97,29 +97,81 @@ function Main() {
           id="header-sticky"
           className={`menu-area${isScrolled ? "menu-area sticky-menu" : ""}`}
         >
-          <div className="container">
-            <div className="second-menu">
-              <div className="row align-items-center">
-                <div className="col-xl-3 col-lg-3">
-                  <div className="logo">
+          <div className="container-fluid">
+            <div
+              className="second-menu"
+              style={{
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                minHeight: "70px",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "30px",
+                  width: "100%",
+                  flexWrap: "wrap",
+                }}
+              >
+                <div style={{ flexShrink: 0 }}>
+                  <div
+                    className="logo"
+                    style={{
+                      position: "relative",
+                      left: 0,
+                      top: "auto",
+                      transform: "none",
+                    }}
+                  >
                     <Link to="/">
                       <img
                         src="/assets/img/logo/vcms_logo.png"
                         alt="VCMS Logo"
+                        style={{
+                          maxHeight: "60px",
+                          width: "auto",
+                        }}
                       />
                     </Link>
                   </div>
                 </div>
-                <div className="col-xl-6 col-lg-6">
-                  <div className="main-menu text-right text-xl-right">
+                <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    justifyContent: "center",
+                    minWidth: "300px",
+                  }}
+                >
+                  <div className="main-menu w-100">
                     <nav id="mobile-menu">
-                      <ul>
-                        <li className={isActive("/")}>
+                      <ul
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          gap: "20px",
+                          flexWrap: "wrap",
+                          listStyle: "none",
+                          margin: 0,
+                          padding: 0,
+                        }}
+                      >
+                        <li
+                          className={isActive("/")}
+                          style={{ display: "flex" }}
+                        >
                           <Link to="/" style={{ transition: "all 0.3s ease" }}>
                             Home
                           </Link>
                         </li>
-                        <li className={isActive("/courses")}>
+                        <li
+                          className={isActive("/courses")}
+                          style={{ display: "flex" }}
+                        >
                           <Link
                             to="/courses"
                             style={{ transition: "all 0.3s ease" }}
@@ -127,7 +179,10 @@ function Main() {
                             Courses
                           </Link>
                         </li>
-                        <li className={isActive("/about")}>
+                        <li
+                          className={isActive("/about")}
+                          style={{ display: "flex" }}
+                        >
                           <Link
                             to="/about"
                             style={{ transition: "all 0.3s ease" }}
@@ -135,7 +190,10 @@ function Main() {
                             About Us
                           </Link>
                         </li>
-                        <li className={isActive("/event")}>
+                        <li
+                          className={isActive("/event")}
+                          style={{ display: "flex" }}
+                        >
                           <Link
                             to="/event"
                             style={{ transition: "all 0.3s ease" }}
@@ -143,7 +201,10 @@ function Main() {
                             Event
                           </Link>
                         </li>
-                        <li className={isActive("/projects")}>
+                        <li
+                          className={isActive("/projects")}
+                          style={{ display: "flex" }}
+                        >
                           <Link
                             to="/projects"
                             style={{ transition: "all 0.3s ease" }}
@@ -151,7 +212,10 @@ function Main() {
                             Gallery
                           </Link>
                         </li>
-                        <li className={isActive("/campus-life")}>
+                        <li
+                          className={isActive("/campus-life")}
+                          style={{ display: "flex" }}
+                        >
                           <Link
                             to="/campus-life"
                             style={{ transition: "all 0.3s ease" }}
@@ -159,7 +223,10 @@ function Main() {
                             Campus Life
                           </Link>
                         </li>
-                        <li className={isActive("/team")}>
+                        <li
+                          className={isActive("/team")}
+                          style={{ display: "flex" }}
+                        >
                           <Link
                             to="/team"
                             style={{ transition: "all 0.3s ease" }}
@@ -167,7 +234,10 @@ function Main() {
                             Faculty
                           </Link>
                         </li>
-                        <li className={isActive("/blog")}>
+                        <li
+                          className={isActive("/blog")}
+                          style={{ display: "flex" }}
+                        >
                           <Link
                             to="/blog"
                             style={{ transition: "all 0.3s ease" }}
@@ -175,7 +245,10 @@ function Main() {
                             Blog
                           </Link>
                         </li>
-                        <li className={isActive("/faq")}>
+                        <li
+                          className={isActive("/faq")}
+                          style={{ display: "flex" }}
+                        >
                           <Link
                             to="/faq"
                             style={{ transition: "all 0.3s ease" }}
@@ -183,7 +256,10 @@ function Main() {
                             FAQ
                           </Link>
                         </li>
-                        <li className={isActive("/contact")}>
+                        <li
+                          className={isActive("/contact")}
+                          style={{ display: "flex" }}
+                        >
                           <Link
                             to="/contact"
                             style={{ transition: "all 0.3s ease" }}
@@ -195,9 +271,31 @@ function Main() {
                     </nav>
                   </div>
                 </div>
-                <div className="col-xl-3 col-lg-3 text-right d-none d-lg-block text-right text-xl-right">
-                  <div className="login">
-                    <ul>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "15px",
+                    flexShrink: 0,
+                  }}
+                >
+                  <div
+                    className="login"
+                    style={{
+                      display: "flex",
+                      justifyContent: "flex-end",
+                      alignItems: "center",
+                    }}
+                  >
+                    <ul
+                      style={{
+                        display: "flex",
+                        justifyContent: "flex-end",
+                        alignItems: "center",
+                        marginBottom: 0,
+                        gap: "10px",
+                      }}
+                    >
                       <li>
                         <Link
                           to="#"
@@ -216,7 +314,11 @@ function Main() {
                       </li>
                       <li>
                         <div className="second-header-btn">
-                          <Link to="/contact" className="btn">
+                          <Link
+                            to="/contact"
+                            className="btn"
+                            style={{ borderRadius: "25px" }}
+                          >
                             {" "}
                             admission open{" "}
                           </Link>
@@ -225,138 +327,128 @@ function Main() {
                     </ul>
                   </div>
                 </div>
-                <div className="col-12">
-                  <div className="mobile-menu mean-container">
-                    <div className="mean-bar">
-                      <a
-                        href="#nav"
-                        onClick={() => setmobile(!mobile)}
-                        className={`meanmenu-reveal ${mobile && "meanclose"}`}
-                        style={{
-                          right: 0,
-                          left: "auto",
-                          textAlign: "center",
-                          textIndent: 0,
-                          fontSize: 18,
-                        }}
-                      >
-                        {mobile ? (
-                          "X"
-                        ) : (
-                          <span>
-                            <span>
-                              <span></span>
-                            </span>
-                          </span>
-                        )}
-                      </a>
-                      {mobile && (
-                        <nav className="mean-nav">
+              </div>
+            </div>
+            <div className="mobile-menu mean-container">
+              <div className="mean-bar">
+                <a
+                  href="#nav"
+                  onClick={() => setmobile(!mobile)}
+                  className={`meanmenu-reveal ${mobile && "meanclose"}`}
+                  style={{
+                    right: 0,
+                    left: "auto",
+                    textAlign: "center",
+                    textIndent: 0,
+                    fontSize: 18,
+                  }}
+                >
+                  {mobile ? (
+                    "X"
+                  ) : (
+                    <span>
+                      <span>
+                        <span></span>
+                      </span>
+                    </span>
+                  )}
+                </a>
+                {mobile && (
+                  <nav className="mean-nav">
+                    <ul style={{ display: "block" }}>
+                      <li className="has-sub">
+                        <a href="/">Home</a>
+                        {Events && (
                           <ul style={{ display: "block" }}>
-                            <li className="has-sub">
-                              <a href="/">Home</a>
-                              {Events && (
-                                <ul style={{ display: "block" }}>
-                                  <li>
-                                    <Link to="/">University</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/home-two">Kindergarten</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/home-three">High School</Link>
-                                  </li>
-                                </ul>
-                              )}
-                              <a
-                                className={`mean-expand ${
-                                  mobile && "mean-clicked"
-                                }`}
-                                onClick={() => {
-                                  setEvent(!Events);
-                                }}
-                                href="#"
-                                style={{ fontSize: 18 }}
-                              >
-                                {Events ? "-" : "+"}
-                              </a>
+                            <li>
+                              <Link to="/">University</Link>
                             </li>
                             <li>
-                              <Link to="/about">About Us</Link>
+                              <Link to="/home-two">Kindergarten</Link>
                             </li>
-                            <li className="has-sub">
-                              <Link to="/courses">Courses</Link>
-                              {News && (
-                                <ul style={{ display: "block" }}>
-                                  <li>
-                                    <Link to="/courses">Courses</Link>
-                                  </li>
-                                  <li>
-                                    {" "}
-                                    <Link to="/courses-2">Courses 02</Link>
-                                  </li>
-                                  <li>
-                                    {" "}
-                                    <Link to="/single-courses">
-                                      Course Details
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    {" "}
-                                    <Link to="/single-courses-2">
-                                      Course Details 02
-                                    </Link>
-                                  </li>
-                                </ul>
-                              )}
-
-                              <a
-                                className={`mean-expand ${
-                                  mobile && "mean-clicked"
-                                }`}
-                                onClick={() => {
-                                  setNews(!News);
-                                }}
-                                href="#"
-                                style={{ fontSize: 18 }}
-                              >
-                                {News ? "-" : "+"}
-                              </a>
-                            </li>
-                            <li className="has-sub">
-                              <Link to="/blog">Blog</Link>
-                              {Blog && (
-                                <ul style={{ display: "block" }}>
-                                  <li>
-                                    <Link to="/blog">Blog</Link>
-                                  </li>
-                                  <li>
-                                    <Link to="/blog-details">Blog Details</Link>
-                                  </li>
-                                </ul>
-                              )}
-                              <a
-                                className={`mean-expand ${
-                                  mobile && "mean-clicked"
-                                }`}
-                                onClick={() => {
-                                  setblog(!Blog);
-                                }}
-                                href="#"
-                                style={{ fontSize: 18 }}
-                              >
-                                {Blog ? "-" : "+"}
-                              </a>
-                            </li>
-                            <li className="mean-last">
-                              <Link to="/contact">Contact</Link>
+                            <li>
+                              <Link to="/home-three">High School</Link>
                             </li>
                           </ul>
-                        </nav>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                        )}
+                        <a
+                          className={`mean-expand ${mobile && "mean-clicked"}`}
+                          onClick={() => {
+                            setEvent(!Events);
+                          }}
+                          href="#"
+                          style={{ fontSize: 18 }}
+                        >
+                          {Events ? "-" : "+"}
+                        </a>
+                      </li>
+                      <li>
+                        <Link to="/about">About Us</Link>
+                      </li>
+                      <li className="has-sub">
+                        <Link to="/courses">Courses</Link>
+                        {News && (
+                          <ul style={{ display: "block" }}>
+                            <li>
+                              <Link to="/courses">Courses</Link>
+                            </li>
+                            <li>
+                              {" "}
+                              <Link to="/courses-2">Courses 02</Link>
+                            </li>
+                            <li>
+                              {" "}
+                              <Link to="/single-courses">Course Details</Link>
+                            </li>
+                            <li>
+                              {" "}
+                              <Link to="/single-courses-2">
+                                Course Details 02
+                              </Link>
+                            </li>
+                          </ul>
+                        )}
+
+                        <a
+                          className={`mean-expand ${mobile && "mean-clicked"}`}
+                          onClick={() => {
+                            setNews(!News);
+                          }}
+                          href="#"
+                          style={{ fontSize: 18 }}
+                        >
+                          {News ? "-" : "+"}
+                        </a>
+                      </li>
+                      <li className="has-sub">
+                        <Link to="/blog">Blog</Link>
+                        {Blog && (
+                          <ul style={{ display: "block" }}>
+                            <li>
+                              <Link to="/blog">Blog</Link>
+                            </li>
+                            <li>
+                              <Link to="/blog-details">Blog Details</Link>
+                            </li>
+                          </ul>
+                        )}
+                        <a
+                          className={`mean-expand ${mobile && "mean-clicked"}`}
+                          onClick={() => {
+                            setblog(!Blog);
+                          }}
+                          href="#"
+                          style={{ fontSize: 18 }}
+                        >
+                          {Blog ? "-" : "+"}
+                        </a>
+                      </li>
+                      <li className="mean-last">
+                        <Link to="/contact">Contact</Link>
+                      </li>
+                    </ul>
+                  </nav>
+                )}
               </div>
             </div>
           </div>
