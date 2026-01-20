@@ -4,6 +4,7 @@ import Bredcom from "../Bredcom/Main";
 import Brand from "../menhomethree/Brand";
 import First from "../mencoursedetailstwo/First";
 import Redslider from "../menhome/Redslider";
+import blogbg from "../../assets/img/bg/banner_all.jpg"; // Updated: Added banner image
 
 function Main() {
   const { courseId } = useParams();
@@ -11,7 +12,13 @@ function Main() {
 
   return (
     <>
-      <Bredcom title="Home" subtitle="Course Details" />
+      <Bredcom
+        title="Home"
+        subtitle="Course Details"
+        bannerImg={blogbg}
+        description="Explore detailed course information including modules, assessments, and career prospects."
+      />{" "}
+      {/* Updated: Added banner image and description */}
       <Redslider />
       <First courseId={actualCourseId} />
       <Brand />

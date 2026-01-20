@@ -2,7 +2,7 @@ import React from "react";
 import Bredcom from "../../Bredcom/Main";
 import Brand from "../../menhomethree/Brand";
 import Redslider from "../../menhome/Redslider";
-import blogbg5 from "../../../assets/img/bg/campus_life.png";
+import blogbg5 from "../../../assets/img/bg/banner_all.jpg"; // Updated: Added banner image
 
 function Main() {
   const campusFeatures = [
@@ -19,35 +19,28 @@ function Main() {
         "Connect with diverse learners, build friendships, and collaborate on projects in a supportive environment.",
     },
     {
-      icon: "fas fa-star",
-      title: "Student Activities",
-      description:
-        "Participate in workshops, seminars, cultural events, and competitions that boost your skills and confidence.",
-    },
-    {
-      icon: "fas fa-book-open",
-      title: "Learning Resources",
-      description:
-        "Access comprehensive digital library, research databases, and learning materials available 24/7.",
-    },
-    {
-      icon: "fas fa-comments",
-      title: "Mentorship Program",
-      description:
-        "Connect with industry experts and academic mentors who guide your professional development journey.",
-    },
-    {
       icon: "fas fa-heart",
       title: "Student Support",
       description:
-        "Dedicated counseling, academic support, and career guidance to ensure your success and well-being.",
+        "We offer mentoring, counseling, and resources to help you succeed academically and personally.",
+    },
+    {
+      icon: "fas fa-gamepad",
+      title: "Extracurricular Activities",
+      description:
+        "Participate in clubs, sports, cultural events, and competitions to develop skills beyond the classroom.",
     },
   ];
 
   return (
     <>
-      <Bredcom title="Home" subtitle="Campus Life" bannerImg={blogbg5}/>
-
+      <Bredcom
+        title="Home"
+        subtitle="Campus Life"
+        bannerImg={blogbg5}
+        description="Experience the vibrant culture, activities, and community that make campus an inspiring place to learn and grow."
+      />{" "}
+      {/* Updated: Added banner image and description */}
       {/* Hero Section */}
       <section
         className="pt-120 pb-120 p-relative"
@@ -95,7 +88,6 @@ function Main() {
           </div>
         </div>
       </section>
-
       {/* Campus Features Grid */}
       <section
         className="pt-120 pb-120 p-relative fix"
@@ -222,7 +214,6 @@ function Main() {
           </div>
         </div>
       </section>
-
       {/* Highlights Section */}
       <section
         className="pt-120 pb-120 p-relative"
@@ -408,7 +399,6 @@ function Main() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section
         className="pt-100 pb-100 p-relative"
@@ -485,7 +475,6 @@ function Main() {
           </div>
         </div>
       </section>
-
       <Redslider />
       {/* <Brand/> */}
     </>

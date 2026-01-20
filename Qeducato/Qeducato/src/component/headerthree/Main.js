@@ -101,7 +101,10 @@ function Main() {
         >
           <div className="container-fluid">
             <div className="second-menu">
-              <div className="row align-items-center">
+              <div
+                className="row align-items-center"
+                style={{ flexWrap: "nowrap" }}
+              >
                 <div className="col-xl-3 col-lg-3">
                   <div className="logo">
                     <Link to="/">
@@ -112,7 +115,13 @@ function Main() {
                 <div className="col-xl-6 col-lg-6">
                   <div className="main-menu text-center text-xl-right">
                     <nav id="mobile-menu">
-                      <ul>
+                      <ul
+                        style={{
+                          display: "flex",
+                          flexWrap: "nowrap",
+                          overflowX: "auto",
+                        }}
+                      >
                         <li className={isActive("/")}>
                           <Link to="/" style={{ transition: "all 0.3s ease" }}>
                             Home
@@ -215,7 +224,15 @@ function Main() {
                       </li>
                       <li>
                         <div className="second-header-btn">
-                          <Link to="/contact" className="btn">
+                          <Link
+                            to="/contact"
+                            className="btn"
+                            style={{
+                              padding: "12px 26px",
+                              fontSize: "13px",
+                              fontWeight: "600",
+                            }}
+                          >
                             admission open
                           </Link>
                         </div>

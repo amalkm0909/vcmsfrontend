@@ -3,11 +3,18 @@ import Bredcom from "../Bredcom/Main";
 import First from "../mencourses/First";
 import Brand from "../menhomethree/Brand";
 import Redslider from "../menhome/Redslider";
+import blogbg from "../../assets/img/bg/banner_all.jpg"; // Updated: Added banner image
 
 function Main() {
   return (
     <>
-      <Bredcom title="Home" subtitle="Our courses" />
+      <Bredcom
+        title="Home"
+        subtitle="Our courses"
+        bannerImg={blogbg}
+        description="Explore our diverse range of professional programs and certifications designed to empower your career."
+      />{" "}
+      {/* Updated: Added banner image and description */}
       <First />
       <Redslider />
       {/* <Brand/> */}

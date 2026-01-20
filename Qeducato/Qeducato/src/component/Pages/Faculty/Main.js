@@ -2,22 +2,14 @@ import React from "react";
 import Header from "../../headerone/Main";
 import Bredcom from "../../Bredcom/Main";
 import Redslider from "../../menhome/Redslider";
-import blogbg6 from "../../../assets/img/bg/faculty_bg.jpg";
+import blogbg6 from "../../../assets/img/bg/banner_all.jpg"; // Updated: Added banner image
 
-const facultyData = [
-  {
-    id: 1,
-    name: "Dr. Anil Kumar",
-    image: require("../../assets/img/team/team01.jpg"),
-    designation: "Professor",
-    specialization: "Computer Science",
-    experience: "15 Years",
-    description: "Expert in AI and Machine Learning.",
-  },
-  {
-    id: 2,
-    name: "Ms. Priya Menon",
-    image: require("../../assets/img/team/team02.jpg"),
+      <Bredcom
+        title="Home"
+        subtitle="Faculty"
+        bannerImg={blogbg6}
+        description="Meet our experienced faculty members who are dedicated to shaping the future through quality education and mentorship."
+      /> {/* Updated: Added banner image and description */}
     designation: "Associate Professor",
     specialization: "Mathematics",
     experience: "12 Years",
@@ -65,7 +57,7 @@ function Main() {
   return (
     <>
       <Header />
-      <Bredcom title="Home" subtitle="Faculty" bannerImg={blogbg6}/>
+      <Bredcom title="Home" subtitle="Faculty" bannerImg={blogbg6} />
 
       {/* Hero Section */}
       <section

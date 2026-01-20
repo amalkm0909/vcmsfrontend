@@ -6,7 +6,7 @@ import DirectorMessage from "../Menabout/DirectorMessage";
 import Testimonial from "../menhome/Testimonial";
 import Brand from "../menhomethree/Brand";
 import Redslider from "../menhome/Redslider";
-import blogbg3 from "../../assets/img/bg/about_bg.jpg";
+import blogbg3 from "../../assets/img/bg/banner_all.jpg"; // Updated: Added banner image
 
 function Main() {
   return (
@@ -15,7 +15,9 @@ function Main() {
         title="Home"
         subtitle="About Us"
         bannerImg={blogbg3}
-      />
+        description="Discover our institution's mission, values, and commitment to providing excellence in education and student development."
+      />{" "}
+      {/* Updated: Added banner image and description */}
       <University />
       <Mission />
       <DirectorMessage />

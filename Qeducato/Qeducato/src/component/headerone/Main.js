@@ -114,7 +114,8 @@ function Main() {
                   alignItems: "center",
                   gap: "30px",
                   width: "100%",
-                  flexWrap: "wrap",
+                  flexWrap: "nowrap",
+                  justifyContent: "space-between",
                 }}
               >
                 <div style={{ flexShrink: 0 }}>
@@ -154,10 +155,11 @@ function Main() {
                           display: "flex",
                           justifyContent: "center",
                           gap: "20px",
-                          flexWrap: "wrap",
+                          flexWrap: "nowrap",
                           listStyle: "none",
                           margin: 0,
                           padding: 0,
+                          overflowX: "auto",
                         }}
                       >
                         <li
@@ -317,7 +319,12 @@ function Main() {
                           <Link
                             to="/contact"
                             className="btn"
-                            style={{ borderRadius: "25px" }}
+                            style={{
+                              borderRadius: "25px",
+                              padding: "12px 26px",
+                              fontSize: "13px",
+                              fontWeight: "600",
+                            }}
                           >
                             {" "}
                             admission open{" "}

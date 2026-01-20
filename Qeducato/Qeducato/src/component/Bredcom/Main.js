@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Main({ subtitle, title, bannerImg }) {
+function Main({ subtitle, title, bannerImg, description }) {
   return (
     <>
       <section
@@ -52,9 +52,12 @@ function Main({ subtitle, title, bannerImg }) {
                   {subtitle === "Blog" ? (
                     <div
                       style={{
-                        background: "#fff",
+                        background: "rgba(255, 255, 255, 0.15)",
+                        backdropFilter: "blur(10px)",
+                        WebkitBackdropFilter: "blur(10px)",
                         borderRadius: "24px",
-                        boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                        border: "1px solid rgba(255, 255, 255, 0.2)",
+                        boxShadow: "0 8px 32px rgba(31, 38, 135, 0.15)",
                         padding: "32px 40px 24px 40px",
                         maxWidth: 480,
                         margin: "40px 0 0 auto",
@@ -71,6 +74,8 @@ function Main({ subtitle, title, bannerImg }) {
                           marginBottom: 10,
                           display: "inline-block",
                           fontWeight: 700,
+                          textShadow:
+                            "0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3), 0 0px 20px rgba(0, 0, 0, 0.2)",
                         }}
                       >
                         <i
@@ -83,10 +88,13 @@ function Main({ subtitle, title, bannerImg }) {
                         style={{
                           marginTop: "10px",
                           fontSize: "18px",
-                          color: "#222",
-                          fontWeight: 500,
+                          color: "#fff",
+                          fontWeight: 600,
                           letterSpacing: 1,
                           marginBottom: 0,
+                          textShadow:
+                            "0 2px 4px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3)",
+                          lineHeight: "1.6",
                         }}
                       >
                         "Discover stories, news, and insights from VCMS. Dive
@@ -96,9 +104,12 @@ function Main({ subtitle, title, bannerImg }) {
                   ) : (
                     <div
                       style={{
-                        background: "rgba(255,255,255,0.92)",
+                        background: "rgba(255, 255, 255, 0.15)",
+                        backdropFilter: "blur(10px)",
+                        WebkitBackdropFilter: "blur(10px)",
                         borderRadius: "18px",
-                        boxShadow: "0 4px 24px rgba(0,0,0,0.10)",
+                        border: "1px solid rgba(255, 255, 255, 0.2)",
+                        boxShadow: "0 8px 32px rgba(31, 38, 135, 0.15)",
                         padding: "32px 36px 24px 36px",
                         maxWidth: 520,
                         margin: "40px 40px 0 auto",
@@ -111,9 +122,11 @@ function Main({ subtitle, title, bannerImg }) {
                         style={{
                           fontSize: 38,
                           fontWeight: 800,
-                          color: "#2b2e83",
+                          color: "#fff",
                           marginBottom: 12,
                           letterSpacing: 1,
+                          textShadow:
+                            "0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3), 0 0px 20px rgba(0, 0, 0, 0.2)",
                         }}
                       >
                         {subtitle}
@@ -121,14 +134,18 @@ function Main({ subtitle, title, bannerImg }) {
                       <p
                         style={{
                           fontSize: 18,
-                          color: "#333",
-                          fontWeight: 500,
+                          color: "#fff",
+                          fontWeight: 600,
                           marginBottom: 0,
+                          textShadow:
+                            "0 2px 4px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3)",
+                          lineHeight: "1.6",
                         }}
                       >
-                        {subtitle === "Courses"
-                          ? "Explore our diverse range of professional programs and certifications designed to empower your career."
-                          : "Learn more about our journey and mission"}
+                        {description ||
+                          (subtitle === "Courses"
+                            ? "Explore our diverse range of professional programs and certifications designed to empower your career."
+                            : "Learn more about our journey and mission")}
                       </p>
                     </div>
                   )}
