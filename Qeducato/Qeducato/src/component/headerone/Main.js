@@ -166,7 +166,14 @@ function Main() {
                           className={isActive("/")}
                           style={{ display: "flex" }}
                         >
-                          <Link to="/" style={{ transition: "all 0.3s ease" }}>
+                          <Link
+                            to="/"
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
+                          >
                             Home
                           </Link>
                         </li>
@@ -176,7 +183,11 @@ function Main() {
                         >
                           <Link
                             to="/courses"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Courses
                           </Link>
@@ -187,7 +198,11 @@ function Main() {
                         >
                           <Link
                             to="/about"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             About Us
                           </Link>
@@ -198,7 +213,11 @@ function Main() {
                         >
                           <Link
                             to="/event"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Event
                           </Link>
@@ -209,7 +228,11 @@ function Main() {
                         >
                           <Link
                             to="/projects"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Gallery
                           </Link>
@@ -220,7 +243,11 @@ function Main() {
                         >
                           <Link
                             to="/campus-life"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Campus Life
                           </Link>
@@ -231,7 +258,11 @@ function Main() {
                         >
                           <Link
                             to="/team"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Faculty
                           </Link>
@@ -242,7 +273,11 @@ function Main() {
                         >
                           <Link
                             to="/blog"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Blog
                           </Link>
@@ -253,7 +288,11 @@ function Main() {
                         >
                           <Link
                             to="/faq"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             FAQ
                           </Link>
@@ -264,7 +303,11 @@ function Main() {
                         >
                           <Link
                             to="/contact"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Contact
                           </Link>

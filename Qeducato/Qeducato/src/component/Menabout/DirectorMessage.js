@@ -2,7 +2,6 @@ import React from "react";
 import directorImg from "../../assets/img/features/director-img.jpg";
 
 function DirectorMessage() {
-
   return (
     <>
       <section className="about-area about-p pt-120 pb-120 p-relative fix">

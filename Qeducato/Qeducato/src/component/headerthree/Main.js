@@ -123,14 +123,25 @@ function Main() {
                         }}
                       >
                         <li className={isActive("/")}>
-                          <Link to="/" style={{ transition: "all 0.3s ease" }}>
+                          <Link
+                            to="/"
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
+                          >
                             Home
                           </Link>
                         </li>
                         <li className={isActive("/courses")}>
                           <Link
                             to="/courses"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Courses
                           </Link>
@@ -138,7 +149,11 @@ function Main() {
                         <li className={isActive("/about")}>
                           <Link
                             to="/about"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             About Us
                           </Link>
@@ -146,7 +161,11 @@ function Main() {
                         <li className={isActive("/event")}>
                           <Link
                             to="/event"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Event
                           </Link>
@@ -154,7 +173,11 @@ function Main() {
                         <li className={isActive("/projects")}>
                           <Link
                             to="/projects"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Gallery
                           </Link>
@@ -162,7 +185,11 @@ function Main() {
                         <li className={isActive("/campus-life")}>
                           <Link
                             to="/campus-life"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Campus Life
                           </Link>
@@ -170,7 +197,11 @@ function Main() {
                         <li className={isActive("/team")}>
                           <Link
                             to="/team"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Faculty
                           </Link>
@@ -178,7 +209,11 @@ function Main() {
                         <li className={isActive("/blog")}>
                           <Link
                             to="/blog"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Blog
                           </Link>
@@ -186,7 +221,11 @@ function Main() {
                         <li className={isActive("/faq")}>
                           <Link
                             to="/faq"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             FAQ
                           </Link>
@@ -194,7 +233,11 @@ function Main() {
                         <li className={isActive("/contact")}>
                           <Link
                             to="/contact"
-                            style={{ transition: "all 0.3s ease" }}
+                            style={{
+                              transition: "all 0.3s ease",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                            }}
                           >
                             Contact
                           </Link>
