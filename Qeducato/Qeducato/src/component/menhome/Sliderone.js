@@ -78,7 +78,7 @@ function Sliderone() {
                   backgroundImage: `url(${backgroundImages[index] || Background})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  minHeight: "250px",
+                  minHeight: "180px",
                 }}
               >
                 <div className="container">

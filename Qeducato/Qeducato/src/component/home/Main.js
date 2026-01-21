@@ -13,6 +13,7 @@ import Admission from "../menhome/Admission";
 import Redslider from "../menhome/Redslider";
 import Blog from "../menhome/Blog";
 import Subscribe from "../menhome/Subscribe";
+import Placements from "../menhome/Placements";
 
 function Main() {
   return (
@@ -22,6 +23,7 @@ function Main() {
       <Courses />
       <Shep />
       <Event />
+      <Placements />
       <Scholarship />
       <Frequently />
       <Video />

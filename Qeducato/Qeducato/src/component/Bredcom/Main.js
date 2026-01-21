@@ -9,11 +9,11 @@ function Main({ subtitle, title, bannerImg, description }) {
         style={{
           backgroundImage: `url(${bannerImg ? bannerImg : require("../../assets/img/bg/course_bg.jpg")})`,
           backgroundSize: subtitle === "Blog" ? undefined : "cover",
-          backgroundPosition: "center",
+          backgroundPosition: subtitle === "Blog" ? undefined : "center top",
           backgroundRepeat: "no-repeat",
           animation: "fadeIn 0.8s ease-in",
           position: "relative",
-          minHeight: subtitle === "Blog" ? undefined : "600px",
+          minHeight: subtitle === "Blog" ? undefined : "400px",
           height: subtitle === "Blog" ? undefined : "auto",
           paddingTop: subtitle === "Blog" ? undefined : 0,
           paddingBottom: subtitle === "Blog" ? undefined : 0,

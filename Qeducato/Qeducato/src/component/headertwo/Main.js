@@ -205,22 +205,6 @@ function Main() {
                   <div className="login">
                     <ul>
                       <li>
-                        <Link
-                          to="#"
-                          className="menu-tigger"
-                          onClick={() => {
-                            setBtnshow(true);
-                          }}
-                        >
-                          <i
-                            className="fal fa-search"
-                            onClick={() => {
-                              setBtnshow(true);
-                            }}
-                          />
-                        </Link>
-                      </li>
-                      <li>
                         <div className="second-header-btn">
                           <Link
                             to="/contact"

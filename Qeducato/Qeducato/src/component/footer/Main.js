@@ -5,13 +5,13 @@ function Main() {
   return (
     <>
       <footer
-        className="footer-bg footer-p pt-90"
+        className="footer-bg footer-p pt-50"
         style={{
           backgroundColor: "#0f3a5b",
           backgroundImage: "url(/assets/img/bg/footer-bg.png)",
         }}
       >
-        <div className="footer-top pb-70">
+        <div className="footer-top pb-40">
           <div className="container">
             <div
               className="row"
@@ -456,7 +456,7 @@ function Main() {
           style={{
             background:
               "linear-gradient(90deg, #d4aaaa 0%, #f9fbfd 50%, #ffffff 100%)",
-            padding: "14px 0",
+            padding: "8px 0",
             borderTop: "2px solid #4899d2",
             position: "relative",
             overflow: "hidden",
