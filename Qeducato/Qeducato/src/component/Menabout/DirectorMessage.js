@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import directorImg from "../../assets/img/features/director-img.jpg";
 
 function DirectorMessage() {
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <>
@@ -14,8 +13,6 @@ function DirectorMessage() {
                 className="s-about-img p-relative wow fadeInLeft animated"
                 data-animation="fadeInLeft"
                 data-delay=".4s"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
               >
                 <img
                   src={directorImg}
@@ -31,19 +28,19 @@ function DirectorMessage() {
                 <div
                   className="about-text second-about"
                   style={{
-                    marginTop: "-100px",
+                    marginTop: "30px",
                     position: "relative",
                     zIndex: "1",
                     background: "transparent",
-                    padding: "40px 30px",
+                    padding: "20px 30px",
                     borderRadius: "12px",
                     textAlign: "center",
                     boxShadow: "none",
                     width: "100%",
-                    opacity: isHovered ? 1 : 0,
-                    transform: isHovered ? "translateY(0)" : "translateY(20px)",
+                    opacity: 1,
+                    transform: "translateY(0)",
                     transition: "all 0.4s ease",
-                    pointerEvents: isHovered ? "auto" : "none",
+                    pointerEvents: "auto",
                   }}
                 >
                   <h5
