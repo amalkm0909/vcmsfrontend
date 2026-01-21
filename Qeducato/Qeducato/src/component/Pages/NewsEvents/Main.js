@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../headerone/Main";
 import Bredcom from "../../Bredcom/Main";
-import Brand from "../../menhomethree/Brand";
 import Redslider from "../../menhome/Redslider";
 
 function Main() {

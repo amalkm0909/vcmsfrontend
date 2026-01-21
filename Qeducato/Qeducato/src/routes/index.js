@@ -5,7 +5,6 @@ import Hometwo from "../component/hometwo/Main";
 import Homethree from "../component/homethree/Main";
 import About from "../component/About/Main";
 import Courses from "../component/Courses/Main";
-import Coursestwo from "../component/coursestwo/Main";
 import Coursesdeatils from "../component/coursedetails/Main";
 import Coursesdeatilstwo from "../component/coursedetailstwo/Main";
 import Event from "../component/Pages/event/Main";
@@ -46,7 +45,7 @@ function Index() {
         <Route path="/home-three" element={<Homethree />} />
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/courses-2" element={<Coursestwo />} />
+        <Route path="/courses-2" element={<Courses />} />
         <Route path="/course-details/:courseId" element={<Coursesdeatils />} />
         <Route path="/single-courses" element={<Coursesdeatils />} />
         <Route path="/single-courses-2" element={<Coursesdeatilstwo />} />

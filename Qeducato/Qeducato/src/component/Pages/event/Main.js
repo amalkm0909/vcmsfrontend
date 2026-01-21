@@ -1,6 +1,5 @@
 import React from "react";
 import Bredcom from "../../Bredcom/Main";
-//import Brand from '../../menhomethree/Brand'
 import First from "../menevent/First";
 import Redslider from "../../menhome/Redslider";
 import blogbg1 from "../../../assets/img/bg/banner_all.jpg"; // Updated: Added banner image

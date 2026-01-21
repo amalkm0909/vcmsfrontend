@@ -366,15 +366,9 @@ function Main() {
                       <li className="has-sub">
                         <a href="/">Home</a>
                         {Events && (
-                          <ul style={{ display: "block" }}>
+                          <ul className="display-block">
                             <li>
                               <Link to="/">University</Link>
-                            </li>
-                            <li>
-                              <Link to="/home-two">Kindergarten</Link>
-                            </li>
-                            <li>
-                              <Link to="/home-three">High School</Link>
                             </li>
                           </ul>
                         )}
@@ -395,7 +389,7 @@ function Main() {
                       <li className="has-sub">
                         <Link to="/courses">Courses</Link>
                         {News && (
-                          <ul style={{ display: "block" }}>
+                          <ul className="display-block">
                             <li>
                               <Link to="/courses">Courses</Link>
                             </li>
@@ -430,7 +424,7 @@ function Main() {
                       <li className="has-sub">
                         <Link to="/blog">Blog</Link>
                         {Blog && (
-                          <ul style={{ display: "block" }}>
+                          <ul className="display-block">
                             <li>
                               <Link to="/blog">Blog</Link>
                             </li>

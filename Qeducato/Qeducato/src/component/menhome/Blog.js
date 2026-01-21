@@ -87,12 +87,13 @@ function Blog() {
                   </div>
                   <h4 style={{ minHeight: "50px" }}>
                     <Link to="/blog-details">
-                      Cras accumsan nulla nec lacus ultricies placerat.
+                      VCMS Integration: Streamlining Campus Operations
                     </Link>
                   </h4>
                   <p style={{ flex: 1 }}>
-                    Curabitur sagittis libero tincidunt tempor finibus. Mauris
-                    at dignissim ligula, nec tristique orci.
+                    Discover how Virtual Campus Management System enhances
+                    administrative efficiency and improves student engagement
+                    across all departments.
                   </p>
                   <div className="blog-btn" style={{ marginTop: "auto" }}>
                     <Link to="/blog-details">
@@ -157,12 +158,13 @@ function Blog() {
                   </div>
                   <h4 style={{ minHeight: "50px" }}>
                     <Link to="/blog-details">
-                      Dras accumsan nulla nec lacus ultricies placerat.
+                      Benefits of Digital Learning Management via VCMS
                     </Link>
                   </h4>
                   <p style={{ flex: 1 }}>
-                    Curabitur sagittis libero tincidunt tempor finibus. Mauris
-                    at dignissim ligula, nec tristique orci.
+                    Explore how Virtual Campus Management System provides
+                    seamless access to courses, resources, and student services
+                    24/7 from anywhere.
                   </p>
                   <div className="blog-btn" style={{ marginTop: "auto" }}>
                     <Link to="/blog-details">
@@ -227,12 +229,13 @@ function Blog() {
                   </div>
                   <h4 style={{ minHeight: "50px" }}>
                     <Link to="/blog-details">
-                      Seas accumsan nulla nec lacus ultricies placerat.
+                      Student Success Stories Through VCMS Platform
                     </Link>
                   </h4>
                   <p style={{ flex: 1 }}>
-                    Curabitur sagittis libero tincidunt tempor finibus. Mauris
-                    at dignissim ligula, nec tristique orci.
+                    Learn how students are achieving their academic goals using
+                    the comprehensive tools and features of Virtual Campus
+                    Management System.
                   </p>
                   <div className="blog-btn" style={{ marginTop: "auto" }}>
                     <Link to="/blog-details">

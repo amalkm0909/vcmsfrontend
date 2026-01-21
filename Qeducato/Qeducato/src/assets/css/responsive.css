@@ -639,6 +639,12 @@ margin-right: 8px;
     .s-video-wrap2{
         margin-bottom: 50px;
     }
+    .mean-nav ul li ul {
+    display: none !important;
+}
+    .mean-nav ul li ul.display-block {
+    display: block !important;
+}
     .service-details-two {
   margin-top: 0;
   padding: 120px 0;
@@ -1311,6 +1317,12 @@ box-shadow: 0 0 0 0;
     .faq-wrap.pl-30 {
   padding-top: 50px;
   padding-left: 0;
+}
+    .mean-nav ul li ul {
+    display: none !important;
+}
+    .mean-nav ul li ul.display-block {
+    display: block !important;
 }
     .faq-wrap.mt-30.pr-30 {
   padding-right: 0;

@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Bredcom from "../Bredcom/Main";
-import Brand from "../menhomethree/Brand";
 import First from "../mencoursedetailstwo/First";
 import Redslider from "../menhome/Redslider";
 import blogbg from "../../assets/img/bg/banner_all.jpg"; // Updated: Added banner image
@@ -21,7 +20,6 @@ function Main() {
       {/* Updated: Added banner image and description */}
       <Redslider />
       <First courseId={actualCourseId} />
-      <Brand />
     </>
   );
 }

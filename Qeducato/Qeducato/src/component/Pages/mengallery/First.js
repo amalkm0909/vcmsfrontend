@@ -1,130 +1,272 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 function First() {
+  // Add fade-in animation styles
+  const animationStyles = `
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes shimmer {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+    
+    .gallery-shimmer {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      animation: shimmer 2s infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+  `;
   const Data = [
+    // {
+    //   img: "assets/img/gallery/protfolio-img01.jpg",
+    //   category: "Campus Life",
+    //   title: "Campus Facilities",
+    //   type: "image",
+    // },
+
     {
-      img: "assets/img/gallery/protfolio-img01.jpg",
-      category: "Campus Life",
-      title: "Campus Facilities",
-      type: "image",
-    },
-    {
-      img: "assets/img/gallery/protfolio-img02.jpg",
       category: "Student Events",
-      title: "Student Engagement",
+      title: "Event Highlights",
+      details: "Memorable moments from our events",
+      videoId: "xaJnc2g9gPQ",
+      type: "video",
+    },
+    // {
+    //   img: "assets/img/gallery/protfolio-img03.jpg",
+    //   category: "Academics",
+    //   title: "Classroom Learning",
+    //   type: "image",
+    // },
+    // {
+    //   img: "assets/img/gallery/protfolio-img04.jpg",
+    //   category: "Placements",
+    //   title: "Success Stories",
+    //   type: "image",
+    // },
+    // {
+    //   img: "assets/img/gallery/protfolio-img05.jpg",
+    //   category: "Campus Life",
+    //   title: "Campus Experience",
+    //   type: "image",
+    // },
+    // {
+    //   img: "assets/img/gallery/protfolio-img06.jpg",
+    //   category: "Campus Life",
+    //   title: "Campus Infrastructure",
+    //   type: "image",
+    // },
+    {
+      category: "Campus Life",
+      title: "Campus Life Highlights",
+      details: "Experience our vibrant campus community",
+      videoId: "WXhj5oyj-BU",
+      type: "video",
+    },
+    {
+      category: "Campus Life",
+      title: "campus life",
+      details: "Explore our beautiful campus",
+      videoId: "zciNPEHV4nk",
+      type: "video",
+    },
+    {
+      category: "Campus Life",
+      title: "campus life",
+      details: "Explore our beautiful campus",
+      videoId: "tw2Q0p1AzPo",
+      type: "video",
+    },
+    {
+      category: "Campus Life",
+      title: "campus life",
+      details: "Explore our beautiful campus",
+      videoId: "2BgCeIEmE3k",
+      type: "video",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img07.jpg",
+      category: "Placements",
+      title: "MASOUDH M P",
+      details: "Insurance Coordinator",
       type: "image",
     },
     {
-      img: "assets/img/gallery/protfolio-img03.jpg",
-      category: "Academics",
-      title: "Classroom Learning",
+      img: "assets/img/gallery/protfolio-img08.jpg",
+      category: "Placements",
+      title: "NAVEEN JOSEPH JOJI",
+      details: "Warehouse Supervisor",
       type: "image",
     },
     {
-      img: "assets/img/gallery/protfolio-img04.jpg",
+      img: "assets/img/gallery/protfolio-img09.jpg",
+      category: "Placements",
+      title: "ASIYA BEEVI",
+      details: "Guest Relation Executive",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img10.jpg",
+      category: "Placements",
+      title: "JOVEEN JOHN",
+      details: "Warehouse Supervisor",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img11.jpg",
+      category: "Placements",
+      title: "SAJJAD V T",
+      details: "Inventory Supervisor",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img12.jpg",
+      category: "Placements",
+      title: "NAZEEL N",
+      details: "Warehouse Supervisor",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img13.jpg",
+      category: "Placements",
+      title: "ALAN KUNJUMON",
+      details: "NDT Supervisor",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img14.jpg",
+      category: "Placements",
+      title: "MEGHA AJI",
+      details: "Patient Relation Officer",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img15.jpg",
+      category: "Placements",
+      title: "FASIL T S",
+      details: "Container Clearance Supervisor",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img16.jpg",
+      category: "Placements",
+      title: "FEMINA",
+      details: "Public Relation Executive",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img17.jpg",
+      category: "Placements",
+      title: "NITHEESHA VINCENT",
+      details: "Insurance Department",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img18.jpg",
+      category: "Placements",
+      title: "ATHULYA",
+      details: "HR Executive",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img19.jpg",
+      category: "Placements",
+      title: "PRETTY MATHEW",
+      details: "Finance Department",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img20.jpg",
+      category: "Placements",
+      title: "NAJEEM E N",
+      details: "Transportation Coordinator",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img21.jpg",
+      category: "Placements",
+      title: "PREETHI",
+      details: "Patient Care Coordinator",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img22.jpg",
+      category: "Placements",
+      title: "PARVATHY P",
+      details: "Finance Department",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img23.jpg",
+      category: "Placements",
+      title: "ALFIYA P I",
+      details: "Junior Accountant",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img24.jpg",
+      category: "Placements",
+      title: "SAJNA",
+      details: "Business Administrator",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img25.jpg",
+      category: "Placements",
+      title: "JOSEPH FRANCIS",
+      details: "Hull Supervisor",
+      type: "image",
+    },
+    {
+      img: "assets/img/gallery/protfolio-img26.jpg",
+      category: "Placements",
+      title: "ARAVIND AV",
+      details: "Piping Supervisor",
+      type: "image",
+    },
+    {
       category: "Placements",
       title: "Success Stories",
-      type: "image",
-    },
-    {
-      img: "assets/img/gallery/protfolio-img06.jpg",
-      category: "Campus Life",
-      title: "Campus Infrastructure",
-      type: "image",
-    },
-    {
-      img: "assets/img/gallery/protfolio-img01.jpg",
-      category: "Student Events",
-      title: "Cultural Programs",
-      type: "image",
-    },
-    {
-      img: "assets/img/gallery/protfolio-img02.jpg",
-      category: "Academics",
-      title: "Training Sessions",
-      type: "image",
-    },
-    {
-      img: "assets/img/gallery/protfolio-img03.jpg",
-      category: "Placements",
-      title: "Corporate Events",
-      type: "image",
-    },
-    {
-      img: "assets/img/gallery/protfolio-img04.jpg",
-      category: "Campus Life",
-      title: "Student Life",
-      type: "image",
-    },
-
-    // INSTAGRAM IMAGES - Replace URLs with actual Instagram image URLs
-    {
-      img: "https://scontent.cdninstagram.com/v/PASTE_INSTAGRAM_IMAGE_URL_HERE_1.jpg",
-      category: "Campus Life",
-      title: "Instagram - Campus Life",
-      type: "image",
-    },
-    {
-      img: "https://scontent.cdninstagram.com/v/PASTE_INSTAGRAM_IMAGE_URL_HERE_2.jpg",
-      category: "Student Events",
-      title: "Instagram - Student Event",
-      type: "image",
-    },
-    {
-      img: "https://scontent.cdninstagram.com/v/PASTE_INSTAGRAM_IMAGE_URL_HERE_3.jpg",
-      category: "Academics",
-      title: "Instagram - Academic Activity",
-      type: "image",
-    },
-    {
-      img: "https://scontent.cdninstagram.com/v/https://www.instagram.com/vcms_cochin/reel/DTe27COkmfC/",
-      category: "Placements",
-      title: "Instagram - Placement Success",
-      type: "image",
-    },
-    {
-      img: "https://scontent.cdninstagram.com/v/PASTE_INSTAGRAM_IMAGE_URL_HERE_5.jpg",
-      category: "Campus Life",
-      title: "Instagram - Campus Moments",
-      type: "image",
-    },
-
-    // YOUTUBE VIDEOS - Replace Video IDs with actual YouTube Video IDs
-    {
-      videoId: "PASTE_YOUTUBE_VIDEO_ID_HERE_1",
-      category: "Student Events",
-      title: "YouTube - Campus Tour",
+      details: "Watch our placements in action",
+      videoId: "1CyUTyQari8",
       type: "video",
     },
     {
-      videoId: "PASTE_YOUTUBE_VIDEO_ID_HERE_2",
-      category: "Academics",
-      title: "YouTube - Course Overview",
-      type: "video",
-    },
-    {
-      videoId: "PASTE_YOUTUBE_VIDEO_ID_HERE_3",
       category: "Placements",
-      title: "YouTube - Student Success Story",
-      type: "video",
-    },
-    {
-      videoId: "PASTE_YOUTUBE_VIDEO_ID_HERE_4",
-      category: "Campus Life",
-      title: "YouTube - VCMS Life",
+      title: "Student Testimonials",
+      details: "Hear from our successful graduates",
+      videoId: "vVYnhXNrxjk",
       type: "video",
     },
   ];
 
   const [current, setcurrent] = useState(Data);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const Filter = (category) => {
     const arr = [];
     if (category === "View All") {
       setcurrent(Data);
     } else {
-      Data.map((item) => {
+      Data.forEach((item) => {
         if (item.category === category) {
           arr.push(item);
         }
@@ -135,6 +277,7 @@ function First() {
 
   return (
     <>
+      <style>{animationStyles}</style>
       <section
         id="work"
         className="pt-120 pb-120"
@@ -351,7 +494,8 @@ function First() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "25px",
+                gap: "30px",
+                padding: "20px",
               }}
             >
               {current.map((item, Index) => (
@@ -360,14 +504,22 @@ function First() {
                   style={{
                     position: "relative",
                     overflow: "hidden",
-                    borderRadius: "12px",
-                    boxShadow: "0 5px 30px rgba(0,0,0,0.1)",
+                    borderRadius: "16px",
+                    boxShadow:
+                      "0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08)",
+                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                    cursor: "pointer",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    animation: `fadeIn 0.6s ease-out ${Index * 0.1}s both`,
+                  }}
+                  onMouseEnter={(e) => {
+                    setHoveredIndex(Index);
+                  }}
+                  onMouseLeave={(e) => {
+                    setHoveredIndex(null);
                   }}
                 >
-                  <Link
-                    to="/single-projects"
-                    style={{ textDecoration: "none", display: "block" }}
-                  >
+                  <div style={{ textDecoration: "none", display: "block" }}>
                     <figure
                       className="gallery-image"
                       style={{
@@ -409,6 +561,7 @@ function First() {
                             objectFit: "cover",
                             transition: "transform 0.4s ease",
                             cursor: "pointer",
+                            borderRadius: "16px",
                           }}
                           onMouseEnter={(e) => {
                             e.target.style.transform = "scale(1.1)";
@@ -418,6 +571,9 @@ function First() {
                           }}
                         />
                       )}
+                      {hoveredIndex === Index && (
+                        <div className="gallery-shimmer"></div>
+                      )}
                       <div
                         style={{
                           position: "absolute",
@@ -425,63 +581,62 @@ function First() {
                           left: "0",
                           right: "0",
                           bottom: "0",
-                          backgroundColor: "rgba(15, 58, 91, 0.85)",
+                          backgroundColor: "transparent",
                           display: "flex",
                           flexDirection: "column",
-                          justifyContent: "center",
+                          justifyContent: "flex-end",
                           alignItems: "center",
-                          opacity: "0",
+                          opacity: hoveredIndex === Index ? "1" : "0",
                           transition: "opacity 0.3s ease",
-                          gap: "10px",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.opacity = "1";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.opacity = "0";
+                          gap: "8px",
+                          padding: "30px",
+                          textAlign: "center",
                         }}
                       >
                         <h4
                           style={{
-                            color: "#fff",
+                            color: "#ffffff",
                             margin: "0",
-                            fontSize: "18px",
-                            fontWeight: "700",
+                            fontSize: "24px",
+                            fontWeight: "800",
+                            letterSpacing: "0.5px",
+                            lineHeight: "1.3",
+                            textShadow:
+                              "0 2px 8px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6)",
                           }}
                         >
                           {item.title}
                         </h4>
+                        {item.details && (
+                          <p
+                            style={{
+                              color: "#ffffff",
+                              fontSize: "18px",
+                              fontWeight: "700",
+                              margin: "8px 0",
+                              letterSpacing: "0.3px",
+                              textShadow:
+                                "0 2px 8px rgba(0, 61, 122, 0.9), 0 2px 4px rgba(0, 0, 0, 0.7)",
+                            }}
+                          >
+                            {item.details}
+                          </p>
+                        )}
                         <span
                           style={{
-                            color: "#003D7A",
+                            color: "#ffffff",
                             fontSize: "14px",
                             fontWeight: "600",
+                            letterSpacing: "1px",
+                            textTransform: "uppercase",
+                            textShadow: "0 2px 6px rgba(0, 0, 0, 0.8)",
                           }}
                         >
                           {item.category}
                         </span>
-                        {item.type === "video" ? (
-                          <i
-                            className="fas fa-play"
-                            style={{
-                              color: "#4899d2",
-                              fontSize: "24px",
-                              marginTop: "10px",
-                            }}
-                          ></i>
-                        ) : (
-                          <i
-                            className="fas fa-search"
-                            style={{
-                              color: "#4899d2",
-                              fontSize: "24px",
-                              marginTop: "10px",
-                            }}
-                          ></i>
-                        )}
                       </div>
                     </figure>
-                  </Link>
+                  </div>
                 </div>
               ))}
             </div>

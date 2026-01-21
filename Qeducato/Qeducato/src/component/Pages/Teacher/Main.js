@@ -1,9 +1,7 @@
 import React from "react";
 import Bredcom from "../../Bredcom/Main";
-import Brand from "../../menhomethree/Brand";
 import Redslider from "../../menhome/Redslider";
 import First from "../menteacher/First";
-import Expert from "../../menhomethree/Expert";
 import blogbg from "../../../assets/img/bg/banner_all.jpg"; // Updated: Added banner image
 
 function Main() {

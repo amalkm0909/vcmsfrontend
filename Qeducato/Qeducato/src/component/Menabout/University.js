@@ -23,7 +23,7 @@ function University() {
                     position: "absolute",
                     top: "130px",
                     right: "780px",
-                    zIndex: "10",
+                    zIndex: "1",
                   }}
                 >
                   <span>

@@ -6320,6 +6320,7 @@ position: relative;
     width: 50px;
     text-align: center;
     line-height: 50px;
+    display: none;
 }
 .gallery-image:hover::before {
     top: 50%;
@@ -6338,9 +6339,7 @@ position: relative;
 }
 
 .gallery-image:hover::after {
-
-    opacity: .85;
-
+    opacity: 0;
 }
 .masonry-gallery-huge {
     margin: auto;

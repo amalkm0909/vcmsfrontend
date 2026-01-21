@@ -4,7 +4,6 @@ import Bredcom from "../Bredcom/Main";
 import Mission from "../Menabout/Mission";
 import DirectorMessage from "../Menabout/DirectorMessage";
 import Testimonial from "../menhome/Testimonial";
-import Brand from "../menhomethree/Brand";
 import Redslider from "../menhome/Redslider";
 import blogbg3 from "../../assets/img/bg/banner_all.jpg"; // Updated: Added banner image
 
